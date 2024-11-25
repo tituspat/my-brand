@@ -93,7 +93,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <Code className="w-8 h-8 text-purple-500" />
-              <span className="text-2xl font-bold text-white">DigiAgency</span>
+              <span className="text-2xl font-bold text-white">WCS</span>
             </div>
             <p className="text-gray-400">
               Solusi digital terbaik untuk mengembangkan bisnis Anda ke level berikutnya dengan website modern dan sistem yang handal.
@@ -194,7 +194,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2024 DigiAgency. All rights reserved.
+              © 2024 WCS. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>

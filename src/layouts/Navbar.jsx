@@ -71,7 +71,7 @@ const Navbar = () => {
             <Circle className="w-8 h-8 text-purple-600" fill="currentColor" />
             <ReactTyped
               className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600"
-              strings={["DigiAgency"]}
+              strings={["WCS", "Build Beyond Basics"]}
               typeSpeed={100}
               loop
               backSpeed={30}
