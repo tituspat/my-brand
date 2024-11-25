@@ -1,5 +1,5 @@
 
-import contactInfo from '../data.js/contact';
+import contactInfo from '../data/contact';
 import React from 'react';
 import { 
   Mail, 
