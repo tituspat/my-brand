@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code, Zap, Shield, Building2, Users, Star, CheckCircle } from 'lucide-react';
+import heroImage from "../assets/hero-image.jpg"
 
 
 const Hero = () => {
@@ -135,14 +136,18 @@ const Hero = () => {
             {/* Main image */}
             <div className="relative bg-white p-4 rounded-2xl shadow-2xl transform hover:-translate-y-2 transition-transform duration-300">
               <img 
-                src="/api/placeholder/600/400"
+                src={heroImage}
                 alt="Website Dashboard Preview"
                 className="rounded-lg"
               />
-              
+              <div className='flex justify-end'>
+                <p className="text-sm text-gray-500 ">
+                  Image by <a href="https://www.freepik.com/free-photo/homepage-seen-computer-screen_26538658.htm#fromView=search&page=1&position=1&uuid=6ca5857e-2772-4714-b14a-6a2df0fa8dbf" target="_blank" rel="noopener noreferrer">Freepik</a>
+                </p>
+              </div>
               {/* Floating elements */}
               <div className="absolute -left-8 top-1/4 bg-white p-3 rounded-xl shadow-lg">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2">   
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
                   <span className="text-sm font-medium">Live Updates</span>
                 </div>

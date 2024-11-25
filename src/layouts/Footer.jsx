@@ -1,3 +1,5 @@
+
+import contactInfo from '../data.js/contact';
 import React from 'react';
 import { 
   Mail, 
@@ -26,18 +28,12 @@ const Footer = () => {
 
   const resources = [
     "Portfolio",
-    "Case Studies",
+    /*"Case Studies",
     "Blog & Artikel",
     "Dokumentasi API",
     "Privacy Policy",
-    "Terms of Service"
+    "Terms of Service"*/
   ];
-
-  const contacts = {
-    phone: "+62 895-4148-7461",
-    email: "contact@example.com",
-    address: "Jl. Teknik Kimia, Surabaya, Indonesia"
-  };
 
   const socials = [
     { icon: <Facebook className="w-5 h-5" />, link: "#", name: "Facebook" },
@@ -153,22 +149,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-6">Contact</h3>
             <div className="space-y-4">
               <a 
-                href={`tel:${contacts.phone}`}
+                href={contactInfo.whatsapp}
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                {contacts.phone}
+                {contactInfo.phone}
               </a>
               <a 
-                href={`mailto:${contacts.email}`}
+                href={`mailto:${contactInfo.email}`}
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                {contacts.email}
+                {contactInfo.email}
               </a>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 flex-shrink-0" />
-                {contacts.address}
+                {contactInfo.address}
               </div>
 
               {/* Social Links */}
@@ -197,9 +193,9 @@ const Footer = () => {
               © 2024 WCS. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+              {/*<a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>*/}
             </div>
           </div>
         </div>

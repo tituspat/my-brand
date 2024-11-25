@@ -141,7 +141,7 @@ const PortfolioSection = () => {
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                {/*<div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, index) => (
                     <span 
                       key={index}
@@ -150,9 +150,9 @@ const PortfolioSection = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
+                </div>*/}
 
-                <div className="flex items-center justify-between text-sm text-gray-500">
+                {/*<div className="flex items-center justify-between text-sm text-gray-500">
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4" />
                     {project.client}
@@ -161,7 +161,7 @@ const PortfolioSection = () => {
                     <Calendar className="w-4 h-4" />
                     {project.year}
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           ))}

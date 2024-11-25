@@ -1,3 +1,5 @@
+
+import contactInfo from '../data.js/contact';
 import React, { useState } from 'react';
 import { 
   MapPin, 
@@ -114,7 +116,8 @@ const ContactSection = () => {
               <h3 className="text-xl font-semibold mb-6">Hubungi Kami</h3>
               <div className="space-y-4">
                 <a 
-                  href="tel:+6289541487461" 
+                  href={contactInfo.whatsapp}
+                  target='_blank' 
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-purple-50 transition-colors"
                 >
                   <div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600">
@@ -122,7 +125,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Phone</p>
-                    <p className="font-medium text-gray-900">+62 895-4148-7461</p>
+                    <p className="font-medium text-gray-900">{contactInfo.phone}</p>
                   </div>
                 </a>
 
@@ -135,7 +138,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
-                    <p className="font-medium text-gray-900">contact@example.com</p>
+                    <p className="font-medium text-gray-900">{contactInfo.email}</p>
                   </div>
                 </a>
 
@@ -169,7 +172,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="relative lg:col-span-2" >
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Mulai Diskusi Project</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -308,6 +311,8 @@ const ContactSection = () => {
                 </button>
               </form>
             </div>
+            {/* Overlay */}
+            <div className="absolute inset-0 opacity-50 z-10"></div>
           </div>
         </div>
       </div>

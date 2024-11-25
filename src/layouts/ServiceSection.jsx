@@ -82,7 +82,7 @@ const ServicesSection = () => {
   ];
 
   const technologies = [
-    "React.js", "Node.js", "Laravel", "PostgreSQL", "MongoDB", "AWS", "Docker", "Next.js"
+    "React.js", "Node.js", "Laravel", "PostgreSQL", "AWS", "Docker", "Next.js"
   ];
 
   return (
