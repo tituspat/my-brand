@@ -13,6 +13,9 @@ import {
   ArrowRight,
   AlertCircle
 } from 'lucide-react';
+import { db } from '../firebase/config';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +28,7 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const projectTypes = [
     "Website Company Profile",
@@ -52,27 +56,45 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Show success message
-    setShowSuccess(true);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      budget: '',
-      projectType: '',
-      message: ''
-    });
-    setIsSubmitting(false);
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => setShowSuccess(false), 5000);
+    setError('');
+
+    try {
+      // Add timestamp to the form data
+      const submissionData = {
+        ...formData,
+        createdAt: serverTimestamp(),
+        status: 'new' // You can use this to track inquiry status
+      };
+
+      // Add document to Firebase
+      await addDoc(collection(db, 'inquiries'), submissionData);
+
+      // Show success message
+      setShowSuccess(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        projectType: '',
+        budget: '',
+        message: ''
+      });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setError('Terjadi kesalahan. Silakan coba lagi nanti.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const faqs = [
     {
@@ -181,6 +203,14 @@ const ContactSection = () => {
                   <div className="bg-green-50 text-green-800 rounded-lg p-4 flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
                     <p>Pesan Anda telah terkirim! Kami akan menghubungi Anda segera.</p>
+                  </div>
+                )}
+      
+                {/* Error Message */}
+                {error && (
+                  <div className="bg-red-50 text-red-800 rounded-lg p-4 flex items-center gap-3">
+                    <AlertCircle className="w-5 h-5 text-red-500" />
+                    <p>{error}</p>
                   </div>
                 )}
 
@@ -312,7 +342,7 @@ const ContactSection = () => {
               </form>
             </div>
             {/* Overlay */}
-            <div className="absolute inset-0 opacity-50 z-10"></div>
+            
           </div>
         </div>
       </div>

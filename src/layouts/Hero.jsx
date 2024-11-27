@@ -164,10 +164,9 @@ const Hero = () => {
         </div>
 
         {/* Optional: Social Proof */}
-        {/* Enhanced Social Proof Section */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mt-16 pt-8 border-t border-gray-200">
-            {/* Stats Grid */}
+            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
               {stats.map((stat, index) => (
                 <div 
@@ -185,7 +184,7 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* Company Logos */}
+            
             <div className="space-y-6">
               <p className="text-center text-gray-900 font-semibold text-xl mb-8">
                 Dipercaya oleh perusahaan terkemuka
@@ -202,7 +201,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
