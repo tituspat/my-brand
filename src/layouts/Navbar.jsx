@@ -38,7 +38,6 @@ const Navbar = () => {
     { id: 'beranda', label: 'Beranda' },
     { id: 'layanan', label: 'Layanan' },
     { id: 'portfolio', label: 'Portfolio' },
-    { id: 'testimoni', label: 'Testimoni' },
   ];
 
   const scrollToSection = (sectionId) => {

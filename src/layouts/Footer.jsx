@@ -27,7 +27,7 @@ const Footer = () => {
   ];
 
   const resources = [
-    "Portfolio",
+    "portfolio",
     /*"Case Studies",
     "Blog & Artikel",
     "Dokumentasi API",
@@ -57,6 +57,15 @@ const Footer = () => {
     "Secure & Reliable",
     "24/7 Support"
   ];
+
+  const scrollToSection = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // Scroll dengan animasi halus
+    } else {
+      console.error(`Element with ID "${section}" not found.`);
+    }
+  };
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -133,10 +142,11 @@ const Footer = () => {
               {resources.map((resource, index) => (
                 <li key={index}>
                   <a 
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                    
+                    onClick={() => scrollToSection(resource)}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 capitalize"
                   >
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 " />
                     {resource}
                   </a>
                 </li>
@@ -168,7 +178,7 @@ const Footer = () => {
               </div>
 
               {/* Social Links */}
-              <div className="pt-4">
+              {/*<div className="pt-4">
                 <div className="flex gap-4">
                   {socials.map((social, index) => (
                     <a
@@ -181,7 +191,7 @@ const Footer = () => {
                     </a>
                   ))}
                 </div>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>

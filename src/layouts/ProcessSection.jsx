@@ -64,12 +64,12 @@ const ProcessSection = () => {
     {
       icon: <Shield className="w-8 h-8 text-purple-600" />,
       title: "Garansi Layanan",
-      description: "Support teknis dan maintenance selama 3 bulan setelah website live"
+      description: "Support teknis dan maintenance hingga 1 tahun"
     },
     {
       icon: <Users className="w-8 h-8 text-purple-600" />,
       title: "Tim Profesional",
-      description: "Dikerjakan oleh developer berpengalaman dengan standar industri"
+      description: "Dikerjakan oleh developer berpengalaman"
     }
   ];
 

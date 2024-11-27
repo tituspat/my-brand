@@ -103,12 +103,12 @@ const ContactSection = () => {
     },
     {
       question: "Apakah ada garansi setelah website selesai?",
-      answer: "Ya, kami memberikan garansi maintenance dan support teknis selama 3 bulan."
+      answer: "Ya, kami memberikan garansi maintenance dan support teknis hingga 1 Tahun."
     },
     {
-      question: "Bagaimana tahapan pembayaran?",
-      answer: "Pembayaran dilakukan dalam 3 tahap: DP 40%, progress 30%, dan setelah selesai 30%."
-    }
+      question: "Apakah saya dapat meminta revisi terhadap webstie?",
+      answer: "Ya, selama website masih dalam progress penyelesasian dan selama tidak ada perubahan kebutuhan fungsional yang signifikan"
+    },
   ];
 
   return (
@@ -170,7 +170,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Jam Kerja</p>
-                    <p className="font-medium text-gray-900">Sen - Jum, 9:00 - 17:00</p>
+                    <p className="font-medium text-gray-900">24 Jam</p>
                   </div>
                 </div>
               </div>
