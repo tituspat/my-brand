@@ -40,7 +40,8 @@ const ContactSection = () => {
   ];
 
   const budgetRanges = [
-    "< Rp 5 Juta",
+    "Rp 500 Ribu - Rp 1 Juta",
+    "Rp 1 Juta - Rp 5 Juta",
     "Rp 5 - 10 Juta",
     "Rp 10 - 20 Juta",
     "> Rp 20 Juta"
